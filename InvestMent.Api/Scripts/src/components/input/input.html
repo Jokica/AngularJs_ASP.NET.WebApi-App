@@ -1,0 +1,26 @@
+<div class="form-group">
+    <label for="{{$ctrl.name}}">
+        <span>{{$ctrl.label}}</span>
+        <input type="{{$ctrl.type}}" 
+                class="form-control"
+                name="{{$ctrl.name}}" 
+                id="{{$ctrl.name}}" 
+                ng-model="$ctrl.value"
+                ng-required="$ctrl.required"
+                ng-minlength="$ctrl.minLen"
+                ng-maxlength="$ctrl.maxLen"
+                placeholder="{{$ctrl.label}}">
+    </label>
+    <div ng-if="$ctrl.form[$ctrl.name].$touched" 
+        ng-repeat="(errorName ,value) in $ctrl.form[$ctrl.name].$error">
+        <span class="text-danger" ng-if="errorName == 'required'">
+            This field is required.
+        </span>
+        <span class="text-danger" ng-if="errorName == 'minlength'">
+            This field must be atleast {{$ctrl.minLen}} characters.
+        </span>
+        <span class="text-danger" ng-if="errorName == 'maxlenght'">
+            This field must be less then {{$ctrl.maxlenght}} characters.
+        </span>
+    </div>
+</div>

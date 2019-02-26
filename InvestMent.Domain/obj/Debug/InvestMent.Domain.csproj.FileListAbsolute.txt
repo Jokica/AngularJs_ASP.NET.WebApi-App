@@ -1,0 +1,16 @@
+C:\Users\Jovan Gjorgjiev\source\repos\InvestMent\InvestMent.Domain\bin\Debug\InvestMent.Domain.dll.config
+C:\Users\Jovan Gjorgjiev\source\repos\InvestMent\InvestMent.Domain\bin\Debug\InvestMent.Domain.dll
+C:\Users\Jovan Gjorgjiev\source\repos\InvestMent\InvestMent.Domain\bin\Debug\InvestMent.Domain.pdb
+C:\Users\Jovan Gjorgjiev\source\repos\InvestMent\InvestMent.Domain\bin\Debug\EntityFramework.dll
+C:\Users\Jovan Gjorgjiev\source\repos\InvestMent\InvestMent.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Jovan Gjorgjiev\source\repos\InvestMent\InvestMent.Domain\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Jovan Gjorgjiev\source\repos\InvestMent\InvestMent.Domain\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Jovan Gjorgjiev\source\repos\InvestMent\InvestMent.Domain\bin\Debug\EntityFramework.xml
+C:\Users\Jovan Gjorgjiev\source\repos\InvestMent\InvestMent.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Jovan Gjorgjiev\source\repos\InvestMent\InvestMent.Domain\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Jovan Gjorgjiev\source\repos\InvestMent\InvestMent.Domain\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Jovan Gjorgjiev\source\repos\InvestMent\InvestMent.Domain\obj\Debug\InvestMent.Domain.csprojAssemblyReference.cache
+C:\Users\Jovan Gjorgjiev\source\repos\InvestMent\InvestMent.Domain\obj\Debug\InvestMent.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Jovan Gjorgjiev\source\repos\InvestMent\InvestMent.Domain\obj\Debug\InvestMent.Domain.csproj.CopyComplete
+C:\Users\Jovan Gjorgjiev\source\repos\InvestMent\InvestMent.Domain\obj\Debug\InvestMent.Domain.dll
+C:\Users\Jovan Gjorgjiev\source\repos\InvestMent\InvestMent.Domain\obj\Debug\InvestMent.Domain.pdb

@@ -1,0 +1,6 @@
+C:\Users\Jovan Gjorgjiev\source\repos\InvestMent\InvestMent.BL\bin\Debug\InvestMent.BL.dll
+C:\Users\Jovan Gjorgjiev\source\repos\InvestMent\InvestMent.BL\bin\Debug\InvestMent.BL.pdb
+C:\Users\Jovan Gjorgjiev\source\repos\InvestMent\InvestMent.BL\obj\Debug\InvestMent.BL.csprojAssemblyReference.cache
+C:\Users\Jovan Gjorgjiev\source\repos\InvestMent\InvestMent.BL\obj\Debug\InvestMent.BL.csproj.CoreCompileInputs.cache
+C:\Users\Jovan Gjorgjiev\source\repos\InvestMent\InvestMent.BL\obj\Debug\InvestMent.BL.dll
+C:\Users\Jovan Gjorgjiev\source\repos\InvestMent\InvestMent.BL\obj\Debug\InvestMent.BL.pdb
