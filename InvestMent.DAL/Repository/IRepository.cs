@@ -11,10 +11,10 @@ namespace InvestMent.DAL.Repository
     {
         IEnumerable<T> All(bool asNoTracking);
         Task<List<T>> AllAsync(bool asNoTracking);
-        T Get(long Id);
-        Task<T> GetAsync(long Id);
-        IEnumerable<T> Find(Expression<Func<T,bool>> predicet);
-        Task<List<T>> FindAsync(Expression<Func<T, bool>> predicet);
+        T Find(long Id, List<string> includes = default(List<string>));
+        Task<T> FindAsync(long Id, List<string> includes = default(List<string>));
+        IEnumerable<T> Where(Expression<Func<T,bool>> predicet);
+        Task<List<T>> WhereAsync(Expression<Func<T, bool>> predicet);
 
 
         void Add(T newItem);

@@ -11,7 +11,9 @@
       template: "<home></home>"
     }).when('/login', {
       template: '<login></login>'
-    })
+      }).when('/main', {
+        template:'<main></main>'
+      })
       .otherwise({
         template: "<home></home>"
       })

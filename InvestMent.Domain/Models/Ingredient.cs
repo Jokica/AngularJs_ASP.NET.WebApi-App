@@ -8,6 +8,10 @@ namespace InvestMent.Domain.Models
 {
     public class Ingredient
     {
+        public Ingredient()
+        {
+
+        }
         public long Id { get; set; }
         public string Name { get; set; }
         public IngredientType Type { get; set; }

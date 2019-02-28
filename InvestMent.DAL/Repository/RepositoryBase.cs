@@ -31,20 +31,10 @@ namespace InvestMent.DAL.Repository
             return asNoTracking?  context.Set<T>().AsNoTracking(): context.Set<T>();
         }
 
-        public IEnumerable<T> Find(Expression<Func<T, bool>> predicate)
+        public IEnumerable<T> Where(Expression<Func<T, bool>> predicate)
         {
             return context.Set<T>().Where(predicate);
         }
-
-        public T Get(long Id)
-        {
-            return context.Set<T>().Find(Id);
-        }
-        public Task<T> GetAsync(long Id)
-        {
-            return context.Set<T>().FindAsync(Id);
-        }
-
         public bool Remove(T item)
         {
            return  context.Set<T>().Remove(item) != null;
@@ -60,9 +50,29 @@ namespace InvestMent.DAL.Repository
             return asNoTracking?  context.Set<T>().AsNoTracking().ToListAsync(): context.Set<T>().ToListAsync();
         }
 
-        public Task<List<T>> FindAsync(Expression<Func<T, bool>> predicet)
+        public Task<List<T>> WhereAsync(Expression<Func<T, bool>> predicet)
         {
             return context.Set<T>().Where(predicet).ToListAsync();
+        }
+
+        public Task<T> FindAsync(long Id, List<string> includes = default(List<string>))
+        {
+            var entities = context.Set<T>();
+            foreach (string include in includes)
+            {
+                entities.Include(include);
+            }
+            return entities.FindAsync(Id);
+        }
+
+        public T Find(long Id, List<string> includes = default(List<string>))
+        {
+            var entities = context.Set<T>();
+            foreach (string include in includes)
+            {
+                entities.Include(include);
+            }
+            return entities.Find(Id);
         }
 
         protected ApplicationDbContext Context { get { return context as ApplicationDbContext; } }

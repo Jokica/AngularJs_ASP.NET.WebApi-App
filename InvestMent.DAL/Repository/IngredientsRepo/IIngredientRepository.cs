@@ -1,3 +1,4 @@
+using InvestMent.DAL.DTOs;
 using InvestMent.Domain.Models;
 using System;
 using System.Collections.Generic;
@@ -9,5 +10,6 @@ namespace InvestMent.DAL.Repository.IngredientsRepo
 {
     public interface IIngredientRepository:IRepository<Ingredient>
     {
+         Task<List<IngredientsDTO>> GetIngredientsNamesAndId();
     }
 }

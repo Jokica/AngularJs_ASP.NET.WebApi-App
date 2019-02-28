@@ -1,0 +1,13 @@
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Test\bin\Debug\InvestMent.Test.dll
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Test\bin\Debug\InvestMent.Test.pdb
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Test\obj\Debug\InvestMent.Test.csproj.CoreCompileInputs.cache
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Test\obj\Debug\InvestMent.Test.csproj.CopyComplete
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Test\obj\Debug\InvestMent.Test.dll
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Test\obj\Debug\InvestMent.Test.pdb
