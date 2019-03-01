@@ -1,0 +1,9 @@
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.Dapper\bin\Debug\InvestMent.Persistence.Dapper.dll
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.Dapper\bin\Debug\InvestMent.Persistence.Dapper.pdb
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.Dapper\bin\Debug\Dapper.dll
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.Dapper\bin\Debug\Dapper.xml
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.Dapper\obj\Debug\InvestMent.Persistence.Dapper.csprojAssemblyReference.cache
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.Dapper\obj\Debug\InvestMent.Persistence.Dapper.csproj.CoreCompileInputs.cache
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.Dapper\obj\Debug\InvestMent.Persistence.Dapper.csproj.CopyComplete
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.Dapper\obj\Debug\InvestMent.Persistence.Dapper.dll
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.Dapper\obj\Debug\InvestMent.Persistence.Dapper.pdb

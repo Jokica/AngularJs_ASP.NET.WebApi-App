@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Web;
 using System.Web.Http;
 
 namespace InvestMent.Api.Controllers
@@ -38,7 +39,6 @@ namespace InvestMent.Api.Controllers
         [Route("All")]
         public async Task<List<Pancake>> GetAll( )
         {
-
             return await mediator.Send(new GetAllPanckesRequest());
         }
     }

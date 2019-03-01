@@ -114,3 +114,4 @@ C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.BL\bin\Debug\MediatR.d
 C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.BL\bin\Debug\MediatR.Extensions.AutofacBuilder.dll
 C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.BL\bin\Debug\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.BL\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.BL\obj\Debug\InvestMent.BL.csprojAssemblyReference.cache

@@ -9,6 +9,7 @@ body{
     background: linear-gradient(to right, #6DD5FA, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #fff;
     padding: 20px;
+    box-shadow: #333333 0 0 1px;
 }
 .pt-5{
     padding-top: 50px;
@@ -47,30 +48,52 @@ form.ng-valid{
 }
 .navbar.navbar-default {
     background: #2980B9; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #c9e6f2, #6DD5FA, #2980B9); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right,#c9e6f2, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #ffffff, #6DD5FA, #2980B9); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right,#ffffff, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: #333333 0 0 .5px;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-nav > li > a {
     font-weight: 700;
     color: #145977;
+    text-shadow: #ffffff 0 0 2px;
+
 }
 .navbar-default .navbar-brand,
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
     color: #145977;
+    text-shadow: #ffffff 0 0 2px;
+
 }
 .login-link{
     padding:10px 20px;
     color:aliceblue;
     font-size:20px;
+    text-shadow: #00F260 0 0 1px;
 }
 .login-link:hover{
      text-decoration: none;
 }
 .main--liniar {
+    margin-top:5rem; 
     background: #00F260; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #0575E6, #00F260); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to bottom, #6DD5FA,#6DD5FA, #00F260); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #6DD5FA,#6DD5FA, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100%;
+    min-height: 30vh;
+    text-align: center;
+    box-shadow: #333333 0 0 1px;
+}
+.main--headere{
+    color: #fff;
+    padding: 1.5em 1em 1em .5em;
+    font-size: 3em;
+    text-shadow: #333333 0 0 1px;
+}
+.main--secendary{
+    margin: auto 3em;
+    color: #444444;
+    font-size: 1.2em;
 }

@@ -12,19 +12,22 @@ namespace InvestMent.Domain.Models
         public string Name { get; set; }
         public List<PancakeIngredients> Ingredients { get; set; }
         public Brand CoffeBrand { get; set; }
+        public string ImageURL { get; set; }
         public Pancake()
         {
 
         }
 
-        public Pancake(string Name)
+        public Pancake(string name,string imageUrl)
         {
-            this.Name = Name;
+            ImageURL = imageUrl;
+            Name = Name;
         }
-        public Pancake(string Name, Brand brand)
+        public Pancake(string name, Brand brand,string imageUrl)
         {
-            this.Name = Name;
-            this.CoffeBrand = brand;
+            Name = name;
+            CoffeBrand = brand;
+            ImageURL = imageUrl;
         }
         public void AddIngredients(List<Ingredient> ingredients)
         {

@@ -7,7 +7,7 @@
   function home() {
     function homeController() {
       var vm = this;
-      vm.title = 'Hello World'
+      vm.header = 'Who are we?'
     }
     return {
       bindings: {},
