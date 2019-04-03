@@ -1,0 +1,17 @@
+<div class="flex--center pt-5 main--content">
+    <form class="form-horizontal" name="loginForm" ng-submit="loginForm.$valid && $ctrl.submit()">
+        <my-input type='text' name="UserName" value="$ctrl.user.UserName" form="loginForm" required="true"
+                  label="User Name">
+        </my-input>
+        <my-input type="password" name="password" value="$ctrl.user.Password" form="loginForm" required="true"
+                  label="Password">
+        </my-input>
+        <my-input type="password" name="confirmPassword" value="$ctrl.user.ConfirmPassword" form="loginForm" required="true"
+                  label="Confirm Password">
+        </my-input>
+        <my-input type="number" name="age" value="$ctrl.user.ConfirmPassword" form="loginForm" required="true"
+                  label="Age">
+        </my-input>
+        <button class="btn btn-lg btn-primary" type="submit">Login</button>
+    </form>
+</div>

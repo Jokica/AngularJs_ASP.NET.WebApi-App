@@ -1,20 +1,20 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using InvestMent.Application.Repository.BrandRepo;
+using InvestMent.Application.Repository.IngredientsRepo;
+using InvestMent.Application.Repository.PancakeRepo;
+using InvestMent.Application.UnitOfWork;
 using InvestMent.DAL.Repository.BrandRepo;
 using InvestMent.DAL.Repository.IngredientsRepo;
 using InvestMent.DAL.Repository.PancakeRepo;
-using InvestMent.Persistence;
+using InvestMent.Persistence.DBFirstApproach;
 
 namespace InvestMent.DAL.UnitOfWork
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly ApplicationDbContext context;
+        private readonly DbFirstContext context;
 
-        public UnitOfWork(ApplicationDbContext context)
+        public UnitOfWork(DbFirstContext context)
         {
             this.context = context;
             Pancakes = new PancakeRepository(context);

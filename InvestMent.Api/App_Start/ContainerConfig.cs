@@ -1,17 +1,12 @@
 using Autofac;
-using Autofac.Core;
 using Autofac.Features.Variance;
 using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
 using InvestMent.Application.Features.Pancakes.Query.GetAll;
 using MediatR;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Web;
 using System.Web.Http;
 
 namespace InvestMent.Api
@@ -23,7 +18,9 @@ namespace InvestMent.Api
             var builder = new ContainerBuilder();
             var config = GlobalConfiguration.Configuration;
             //Application Layer
-            Application.ContainerConfigure.Configure(builder);
+            //Application.ContainerConfigure.Configure(builder);
+            Utils.Images.ContainerConfigure.Confiugre(builder);
+            DAL.ContainerConfigure.Confiugre(builder);
             //Register API Controllers
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
             builder.RegisterWebApiFilterProvider(config);
@@ -32,7 +29,7 @@ namespace InvestMent.Api
             //Mediator
             builder.RegisterSource(new ContravariantRegistrationSource());
             builder.RegisterAssemblyTypes(typeof(IMediator).GetTypeInfo().Assembly).AsImplementedInterfaces();
-      
+
 
 
             builder.RegisterAssemblyTypes(typeof(GetAllPanckesRequest).GetTypeInfo().Assembly).Where(t =>

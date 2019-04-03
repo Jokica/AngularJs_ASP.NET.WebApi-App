@@ -1,12 +1,9 @@
+using InvestMent.Domain.Interfaces.DAL;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InvestMent.Domain.Models
 {
-    public class PancakeIngredients
+    public class PancakeIngredients: IDomainEntity
     {
         public PancakeIngredients()
         {
@@ -17,15 +14,24 @@ namespace InvestMent.Domain.Models
             Pancake = pancake;
             Ingredient = ingredient;
         }
+        public PancakeIngredients(long Id,Pancake pancake, Ingredient ingredient)
+        {
+            this.Id = this.Id;
+            PancakeId = pancake?.Id ?? 0;
+            IngredientId = ingredient?.Id ?? 0; 
+            Pancake = pancake;
+            Ingredient = ingredient;
+        }
         public PancakeIngredients(long coffeId, long ingredientId)
         {
-            CoffeId = coffeId;
+            PancakeId = coffeId;
             IngredientId = ingredientId;
         }
         public long Id { get; set; }
-        public long CoffeId { get; set; }
+        public long PancakeId { get; set; }
         public long IngredientId { get; set; }
         public Pancake Pancake { get; set; }
         public Ingredient Ingredient { get; set; }
+
     }
 }

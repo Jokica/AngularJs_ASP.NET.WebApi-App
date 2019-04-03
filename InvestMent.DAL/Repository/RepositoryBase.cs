@@ -1,14 +1,15 @@
-using System;
 using System.Collections.Generic;
-using System.Linq.Expressions;
 using System.Data.Entity;
 using System.Linq;
-using InvestMent.Persistence;
 using System.Threading.Tasks;
+using InvestMent.Domain.Interfaces.DAL;
+using InvestMent.Application.Repository;
+using InvestMent.Persistence.DBFirstApproach;
+using InvestMent.DAL.Converts;
 
 namespace InvestMent.DAL.Repository
 {
-    public abstract class RepositoryBase<T> : IRepository<T> where T:class
+    public  class RepositoryBase<T,U> : IRepository<T,U> where T: class, IDataEntity where U : class,IDomainEntity
     {
         private readonly DbContext context;
 
@@ -16,65 +17,71 @@ namespace InvestMent.DAL.Repository
         {
             this.context = context;
         }
-        public void Add(T newItem)
+        public void Add(U newItem)
         {
-            this.context.Set<T>().Add(newItem);
+            this.context.Set<T>().Add(newItem.Convert() as T);
         }
 
-        public void AddRange(ICollection<T> itemRange)
+        public void AddRange(ICollection<U> itemRange)
         {
-            context.Set<T>().AddRange(itemRange);
+            var items = itemRange.Select(x => x.Convert() as T);
+            context.Set<T>().AddRange(items);
         }
 
-        public IEnumerable<T> All(bool asNoTracking)
+        public IEnumerable<U> All(bool asNoTracking)
         {
-            return asNoTracking?  context.Set<T>().AsNoTracking(): context.Set<T>();
+            var items = asNoTracking?  context.Set<T>().AsNoTracking(): context.Set<T>();
+            return items.ToList().Select(x => x.Convert() as U);
+        }
+        public bool Remove(U item)
+        {
+           return  context.Set<T>().Remove(item.Convert() as T) != null;
+        }
+        public bool RemoveRange(ICollection<U> itemRange)
+        {
+            var items = itemRange.Select(x => x.Convert() as T);
+            return context.Set<T>().RemoveRange(items) != null;
         }
 
-        public IEnumerable<T> Where(Expression<Func<T, bool>> predicate)
+        public async Task<List<U>> AllAsync(bool asNoTracking)
         {
-            return context.Set<T>().Where(predicate);
+            var items = asNoTracking? await context.Set<T>().AsNoTracking().ToListAsync(): await context.Set<T>().ToListAsync();
+            return items.Select(x => x.Convert() as U).ToList();
         }
-        public bool Remove(T item)
+        public async Task<U> FindAsync(long Id, List<string> includes)
         {
-           return  context.Set<T>().Remove(item) != null;
-        }
-        public bool RemoveRange(ICollection<T> itemRange)
-        {
-            return context.Set<T>().RemoveRange(itemRange) != null;
-
-        }
-
-        public Task<List<T>> AllAsync(bool asNoTracking)
-        {
-            return asNoTracking?  context.Set<T>().AsNoTracking().ToListAsync(): context.Set<T>().ToListAsync();
-        }
-
-        public Task<List<T>> WhereAsync(Expression<Func<T, bool>> predicet)
-        {
-            return context.Set<T>().Where(predicet).ToListAsync();
-        }
-
-        public Task<T> FindAsync(long Id, List<string> includes = default(List<string>))
-        {
+            includes = includes ?? new List<string>();
             var entities = context.Set<T>();
             foreach (string include in includes)
             {
                 entities.Include(include);
             }
-            return entities.FindAsync(Id);
+            var item = await entities.FindAsync(Id);
+            return item.Convert() as U;
         }
 
-        public T Find(long Id, List<string> includes = default(List<string>))
+        public U Find(long Id, List<string> includes )
         {
+            includes = includes ?? new List<string>();
             var entities = context.Set<T>();
             foreach (string include in includes)
             {
                 entities.Include(include);
             }
-            return entities.Find(Id);
+            return entities.Find(Id).Convert() as U;
         }
 
-        protected ApplicationDbContext Context { get { return context as ApplicationDbContext; } }
+        public U Find(long Id)
+        {
+            return context.Set<T>().Find(Id).Convert() as U;
+
+        }
+        public async Task<U> FindAsync(long Id)
+        {
+            var res  = await context.Set<T>().FindAsync(Id);
+            return res.Convert() as U;
+
+        }
+        public DbFirstContext DbContext => this.context as DbFirstContext;
     }
 }

@@ -1,0 +1,9 @@
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.SQLServer\bin\Debug\InvestMent.Persistence.SQLServer.dacpac
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.SQLServer\bin\Debug\InvestMent.Persistence.SQLServer.dll
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.SQLServer\bin\Debug\InvestMent.Persistence.SQLServer.pdb
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.SQLServer\obj\Debug\Model.xml
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.SQLServer\obj\Debug\refactor.xml
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.SQLServer\obj\Debug\postdeploy.sql
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.SQLServer\obj\Debug\predeploy.sql
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.SQLServer\obj\Debug\InvestMent.Persistence.SQLServer.dll
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.SQLServer\obj\Debug\InvestMent.Persistence.SQLServer.pdb

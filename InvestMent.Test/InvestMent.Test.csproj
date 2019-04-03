@@ -52,20 +52,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\InvestMent.Api\InvestMent.Api.csproj">
       <Project>{e14d5221-0a0f-41a6-8223-d47a8311b132}</Project>
       <Name>InvestMent.Api</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\InvestMent.Application\InvestMent.Application.csproj">
-      <Project>{36797732-7f58-406d-8d6d-f1c2cd92d53d}</Project>
-      <Name>InvestMent.Application</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\InvestMent.BL\InvestMent.BL.csproj">
-      <Project>{c4b8ec81-ba5c-45fd-87e6-2f6069cd1c73}</Project>
-      <Name>InvestMent.BL</Name>
     </ProjectReference>
     <ProjectReference Include="..\InvestMent.DAL\InvestMent.DAL.csproj">
       <Project>{4445e2d5-4364-464c-bbee-4b86a489f8f5}</Project>

@@ -17,6 +17,7 @@ using InvestMent.Api.Models;
 using InvestMent.Api.Providers;
 using InvestMent.Api.Results;
 using InvestMent.Domain.Models.IdentityModel;
+using InvestMent.Identity;
 
 namespace InvestMent.Api.Controllers
 {
@@ -329,7 +330,7 @@ namespace InvestMent.Api.Controllers
                 return BadRequest(ModelState);
             }
 
-            var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
+            var user = new ApplicationUser() { UserName = model.Email, Email = model.Email ,Age = model.Age};
 
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
 
@@ -431,7 +432,7 @@ namespace InvestMent.Api.Controllers
             {
                 IList<Claim> claims = new List<Claim>
                 {
-                    new Claim(ClaimTypes.NameIdentifier, ProviderKey, null, LoginProvider)
+                    new Claim(ClaimTypes.NameIdentifier, ProviderKey, null, LoginProvider),
                 };
 
                 if (UserName != null)

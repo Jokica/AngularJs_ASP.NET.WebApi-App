@@ -14,6 +14,12 @@
       }).when('/main', {
         template:'<main></main>'
       })
+      .when('/pick', {
+        template:"<pick></pick>"
+      })
+      .when("/build", {
+        template:"<build></build>"
+      })
       .otherwise({
         template: "<home></home>"
       })

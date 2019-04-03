@@ -103,25 +103,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ContainerConfigure.cs" />
+    <Compile Include="DTOs\IngredientsDTO.cs" />
     <Compile Include="Features\IngredientsFeatures\Query\GetIngredient\GetIngredient.cs" />
     <Compile Include="Features\IngredientsFeatures\Query\GetNamesAndId\GetIngredientsNameAndId.cs" />
+    <Compile Include="Features\PancakeFeatures\Commands\AddPancakeImage\AddPancakeImage.cs" />
     <Compile Include="Features\PancakeFeatures\Commands\AddPancake\AddPancake.cs" />
     <Compile Include="Features\PancakeFeatures\Query\GetAll\GetAllPanckes.cs" />
     <Compile Include="Features\PancakeFeatures\Query\GetPancakeImage\GetPancakeImage.cs" />
     <Compile Include="Features\PancakeFeatures\Query\GetPancakeImage\GetPancakeImageResponse.cs" />
+    <Compile Include="Interfaces\DAL\Repository\IBrandRepository.cs" />
+    <Compile Include="Interfaces\DAL\Repository\IIngredientRepository.cs" />
+    <Compile Include="Interfaces\DAL\Repository\IPancakeRepository.cs" />
+    <Compile Include="Interfaces\DAL\Repository\IRepository.cs" />
+    <Compile Include="Interfaces\DAL\Repository\List.cs" />
+    <Compile Include="Interfaces\DAL\UnitOfWork\IUnitOfWork.cs" />
+    <Compile Include="Interfaces\Services\ImageServices\IGetImage.cs" />
+    <Compile Include="Interfaces\Services\ImageServices\IProccesImage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DTOs\Views\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\InvestMent.DAL\InvestMent.DAL.csproj">
-      <Project>{4445E2D5-4364-464C-BBEE-4B86A489F8F5}</Project>
-      <Name>InvestMent.DAL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\InvestMent.Domain\InvestMent.Domain.csproj">
       <Project>{c79a0891-a903-4b16-9dfc-eaf89d1c1c2f}</Project>
       <Name>InvestMent.Domain</Name>

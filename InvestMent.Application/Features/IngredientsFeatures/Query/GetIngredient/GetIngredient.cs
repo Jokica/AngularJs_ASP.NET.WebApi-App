@@ -1,9 +1,6 @@
-using InvestMent.DAL.UnitOfWork;
+using InvestMent.Application.UnitOfWork;
 using MediatR;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -35,13 +32,13 @@ namespace InvestMent.Application.Features.IngredientsFeatures.Query.GetIngredien
                 "IngredientBrand"
 
             };
-            var Ingredient = await unitOfWork.Ingridents.FindAsync(request.Id,includes);
+            Domain.Models.Ingredient ingredient = await unitOfWork.Ingridents.FindAsync(request.Id,includes);
             return new GetIngredientResponse
             {
-                Id = Ingredient.Id,
-                Name = Ingredient.Name,
-                Type = Ingredient.Type.Name,
-                IngredientBrand = Ingredient.IngredientBrand.Name
+                Id = ingredient.Id,
+                Name = ingredient.Name,
+                Type = ingredient.Type.Name,
+                IngredientBrand = ingredient.IngredientBrand.Name
             };
         }
     }

@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Brands">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Ingredients">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="IngredientBrandId" Type="bigint" />
+    <Property Name="TypeId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IngredientTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="PancakeIngredients">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IngredientId" Type="bigint" Nullable="false" />
+    <Property Name="PancakeId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pancakes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="ImageURL" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'aspnet-InvestMent.Api-20190215120735.dbo.GetAllTypeNamesVW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="GetAllTypeNamesVW">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="FK_dbo_CoffeIngredients_dbo_Ingredients_IngredientId">
+    <End Role="Ingredients" Type="Self.Ingredients" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PancakeIngredients" Type="Self.PancakeIngredients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ingredients">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PancakeIngredients">
+        <PropertyRef Name="IngredientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Ingredients_dbo_Brands_IngredientBrandId">
+    <End Role="Brands" Type="Self.Brands" Multiplicity="0..1" />
+    <End Role="Ingredients" Type="Self.Ingredients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brands">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ingredients">
+        <PropertyRef Name="IngredientBrandId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Ingredients_dbo_IngredientTypes_TypeId">
+    <End Role="IngredientTypes" Type="Self.IngredientTypes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Ingredients" Type="Self.Ingredients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IngredientTypes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ingredients">
+        <PropertyRef Name="TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_PancakeIngredients_dbo_Pancakes_PancakeId">
+    <End Role="Pancakes" Type="Self.Pancakes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PancakeIngredients" Type="Self.PancakeIngredients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pancakes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PancakeIngredients">
+        <PropertyRef Name="PancakeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="Brands" EntityType="Self.Brands" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ingredients" EntityType="Self.Ingredients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IngredientTypes" EntityType="Self.IngredientTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PancakeIngredients" EntityType="Self.PancakeIngredients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pancakes" EntityType="Self.Pancakes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GetAllTypeNamesVW" EntityType="Self.GetAllTypeNamesVW" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GetAllTypeNamesVW].[Id] AS [Id], 
+    [GetAllTypeNamesVW].[Name] AS [Name]
+    FROM [dbo].[GetAllTypeNamesVW] AS [GetAllTypeNamesVW]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_dbo_CoffeIngredients_dbo_Ingredients_IngredientId" Association="Self.FK_dbo_CoffeIngredients_dbo_Ingredients_IngredientId">
+      <End Role="Ingredients" EntitySet="Ingredients" />
+      <End Role="PancakeIngredients" EntitySet="PancakeIngredients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Ingredients_dbo_Brands_IngredientBrandId" Association="Self.FK_dbo_Ingredients_dbo_Brands_IngredientBrandId">
+      <End Role="Brands" EntitySet="Brands" />
+      <End Role="Ingredients" EntitySet="Ingredients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Ingredients_dbo_IngredientTypes_TypeId" Association="Self.FK_dbo_Ingredients_dbo_IngredientTypes_TypeId">
+      <End Role="IngredientTypes" EntitySet="IngredientTypes" />
+      <End Role="Ingredients" EntitySet="Ingredients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_PancakeIngredients_dbo_Pancakes_PancakeId" Association="Self.FK_dbo_PancakeIngredients_dbo_Pancakes_PancakeId">
+      <End Role="Pancakes" EntitySet="Pancakes" />
+      <End Role="PancakeIngredients" EntitySet="PancakeIngredients" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

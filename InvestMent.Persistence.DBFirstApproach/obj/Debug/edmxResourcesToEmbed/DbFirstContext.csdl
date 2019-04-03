@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DbFirstContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Brands" EntityType="Model.Brand" />
+    <EntitySet Name="Ingredients" EntityType="Model.Ingredient" />
+    <EntitySet Name="IngredientTypes" EntityType="Model.IngredientType" />
+    <EntitySet Name="PancakeIngredients" EntityType="Model.PancakeIngredient" />
+    <EntitySet Name="Pancakes" EntityType="Model.Pancake" />
+    <EntitySet Name="GetAllTypeNamesVWs" EntityType="Model.GetAllTypeNamesVW" />
+    <AssociationSet Name="FK_dbo_Ingredients_dbo_Brands_IngredientBrandId" Association="Model.FK_dbo_Ingredients_dbo_Brands_IngredientBrandId">
+      <End Role="Brand" EntitySet="Brands" />
+      <End Role="Ingredient" EntitySet="Ingredients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_CoffeIngredients_dbo_Ingredients_IngredientId" Association="Model.FK_dbo_CoffeIngredients_dbo_Ingredients_IngredientId">
+      <End Role="Ingredient" EntitySet="Ingredients" />
+      <End Role="PancakeIngredient" EntitySet="PancakeIngredients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Ingredients_dbo_IngredientTypes_TypeId" Association="Model.FK_dbo_Ingredients_dbo_IngredientTypes_TypeId">
+      <End Role="IngredientType" EntitySet="IngredientTypes" />
+      <End Role="Ingredient" EntitySet="Ingredients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_PancakeIngredients_dbo_Pancakes_PancakeId" Association="Model.FK_dbo_PancakeIngredients_dbo_Pancakes_PancakeId">
+      <End Role="Pancake" EntitySet="Pancakes" />
+      <End Role="PancakeIngredient" EntitySet="PancakeIngredients" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Brand">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Ingredients" Relationship="Model.FK_dbo_Ingredients_dbo_Brands_IngredientBrandId" FromRole="Brand" ToRole="Ingredient" />
+  </EntityType>
+  <EntityType Name="Ingredient">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IngredientBrandId" Type="Int64" />
+    <Property Name="TypeId" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Brand" Relationship="Model.FK_dbo_Ingredients_dbo_Brands_IngredientBrandId" FromRole="Ingredient" ToRole="Brand" />
+    <NavigationProperty Name="PancakeIngredients" Relationship="Model.FK_dbo_CoffeIngredients_dbo_Ingredients_IngredientId" FromRole="Ingredient" ToRole="PancakeIngredient" />
+    <NavigationProperty Name="IngredientType" Relationship="Model.FK_dbo_Ingredients_dbo_IngredientTypes_TypeId" FromRole="Ingredient" ToRole="IngredientType" />
+  </EntityType>
+  <EntityType Name="IngredientType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Ingredients" Relationship="Model.FK_dbo_Ingredients_dbo_IngredientTypes_TypeId" FromRole="IngredientType" ToRole="Ingredient" />
+  </EntityType>
+  <EntityType Name="PancakeIngredient">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IngredientId" Type="Int64" Nullable="false" />
+    <Property Name="PancakeId" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Ingredient" Relationship="Model.FK_dbo_CoffeIngredients_dbo_Ingredients_IngredientId" FromRole="PancakeIngredient" ToRole="Ingredient" />
+    <NavigationProperty Name="Pancake" Relationship="Model.FK_dbo_PancakeIngredients_dbo_Pancakes_PancakeId" FromRole="PancakeIngredient" ToRole="Pancake" />
+  </EntityType>
+  <EntityType Name="Pancake">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ImageURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PancakeIngredients" Relationship="Model.FK_dbo_PancakeIngredients_dbo_Pancakes_PancakeId" FromRole="Pancake" ToRole="PancakeIngredient" />
+  </EntityType>
+  <EntityType Name="GetAllTypeNamesVW">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_dbo_Ingredients_dbo_Brands_IngredientBrandId">
+    <End Type="Model.Brand" Role="Brand" Multiplicity="0..1" />
+    <End Type="Model.Ingredient" Role="Ingredient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brand">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ingredient">
+        <PropertyRef Name="IngredientBrandId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_CoffeIngredients_dbo_Ingredients_IngredientId">
+    <End Type="Model.Ingredient" Role="Ingredient" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Model.PancakeIngredient" Role="PancakeIngredient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ingredient">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PancakeIngredient">
+        <PropertyRef Name="IngredientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Ingredients_dbo_IngredientTypes_TypeId">
+    <End Type="Model.IngredientType" Role="IngredientType" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Model.Ingredient" Role="Ingredient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IngredientType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ingredient">
+        <PropertyRef Name="TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_PancakeIngredients_dbo_Pancakes_PancakeId">
+    <End Type="Model.Pancake" Role="Pancake" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Model.PancakeIngredient" Role="PancakeIngredient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pancake">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PancakeIngredient">
+        <PropertyRef Name="PancakeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

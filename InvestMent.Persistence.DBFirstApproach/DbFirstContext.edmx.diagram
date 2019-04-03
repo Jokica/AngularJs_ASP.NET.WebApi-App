@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="50ac4a07640d4775a69852fd1b92f496" Name="Diagram1" ZoomLevel="82">
+        <EntityTypeShape EntityType="Model.Brand1" Width="1.5" PointX="5.375" PointY="8.375" />
+        <EntityTypeShape EntityType="Model.Ingredient1" Width="1.5" PointX="7.625" PointY="5" />
+        <EntityTypeShape EntityType="Model.IngredientType1" Width="1.5" PointX="5.375" PointY="5.375" />
+        <EntityTypeShape EntityType="Model.PancakeIngredient1" Width="1.5" PointX="9.875" PointY="5.125" />
+        <EntityTypeShape EntityType="Model.Pancake1" Width="1.5" PointX="7.625" PointY="8.25" />
+        <AssociationConnector Association="Model.FK_dbo_Ingredients_dbo_Brands_IngredientBrandId1" />
+        <AssociationConnector Association="Model.FK_dbo_CoffeIngredients_dbo_Ingredients_IngredientId1" />
+        <AssociationConnector Association="Model.FK_dbo_Ingredients_dbo_IngredientTypes_TypeId1" />
+        <AssociationConnector Association="Model.FK_dbo_PancakeIngredients_dbo_Pancakes_PancakeId1" />
+        <EntityTypeShape EntityType="Model.Brand" Width="1.5" PointX="0.75" PointY="5.375" />
+        <EntityTypeShape EntityType="Model.Ingredient" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="Model.IngredientType" Width="1.5" PointX="0.75" PointY="1.375" />
+        <EntityTypeShape EntityType="Model.PancakeIngredient" Width="1.5" PointX="5.25" PointY="1.125" />
+        <EntityTypeShape EntityType="Model.Pancake" Width="1.5" PointX="3" PointY="5.25" />
+        <EntityTypeShape EntityType="Model.GetAllTypeNamesVW" Width="1.5" PointX="5.75" PointY="4.75" />
+        <AssociationConnector Association="Model.FK_dbo_Ingredients_dbo_Brands_IngredientBrandId" />
+        <AssociationConnector Association="Model.FK_dbo_CoffeIngredients_dbo_Ingredients_IngredientId" />
+        <AssociationConnector Association="Model.FK_dbo_Ingredients_dbo_IngredientTypes_TypeId" />
+        <AssociationConnector Association="Model.FK_dbo_PancakeIngredients_dbo_Pancakes_PancakeId" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

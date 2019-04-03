@@ -5,13 +5,22 @@
     .component('home', home());
 
   function home() {
-    function homeController() {
-      var vm = this;
+    function homeController( $location) {
+      const vm = this;
       vm.header = 'Who are we?'
+
+      vm.buildPancake = function () {
+        console.log("Clicked")
+        $location.path("/build");
+      };
+      vm.pickPancake = function () {
+        console.log("Clicked")
+        $location.path("/pick");
+      };
     }
     return {
       bindings: {},
-      controller: homeController,
+      controller: ['$location',homeController],
       templateUrl:resolve('home')
     }
   }

@@ -15,7 +15,8 @@
             config.headers = config.headers || {}
 
             const authData = localStorageService.get('user');
-            if (authData) {
+          if (authData) {
+            console.log(authData.token);
                 config.headers['Authorization'] = 'Bearer ' + authData.token;
             }
             return config;

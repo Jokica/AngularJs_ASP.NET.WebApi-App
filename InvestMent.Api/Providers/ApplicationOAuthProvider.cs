@@ -11,6 +11,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
 using InvestMent.Api.Models;
 using InvestMent.Domain.Models.IdentityModel;
+using InvestMent.Identity;
 
 namespace InvestMent.Api.Providers
 {
@@ -18,15 +19,8 @@ namespace InvestMent.Api.Providers
     {
         private readonly string _publicClientId;
 
-        public ApplicationOAuthProvider(string publicClientId)
-        {
-            if (publicClientId == null)
-            {
-                throw new ArgumentNullException("publicClientId");
-            }
-
-            _publicClientId = publicClientId;
-        }
+        public ApplicationOAuthProvider(string publicClientId)=>
+            _publicClientId = publicClientId ?? throw new ArgumentNullException("publicClientId");
 
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {

@@ -11,7 +11,7 @@ namespace InvestMent.Api.Controllers
         public ActionResult Index()
         {
             ViewBag.Title = "Home Page";
-
+            
             return View();
         }
     }

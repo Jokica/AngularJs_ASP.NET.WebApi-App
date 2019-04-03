@@ -11,6 +11,7 @@ using Owin;
 using InvestMent.Api.Providers;
 using InvestMent.Api.Models;
 using InvestMent.Persistence;
+using InvestMent.Identity;
 
 namespace InvestMent.Api
 {

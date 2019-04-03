@@ -1,10 +1,7 @@
-using InvestMent.DAL.UnitOfWork;
+using InvestMent.Application.UnitOfWork;
 using InvestMent.Domain.Models;
 using MediatR;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -24,11 +21,12 @@ namespace InvestMent.Application.Features.Pancakes.Query.GetAll
         }
         public Task<List<Pancake>> Handle(GetAllPanckesRequest request, CancellationToken cancellationToken)
         {
+            
             return unitOfWork.Pancakes.AllAsync(false);
         }
     }
     public class GetallPanckesResponse
     {
-        public string Name { get; internal set; }
+        public string Name { get;  set; }
     }
 }

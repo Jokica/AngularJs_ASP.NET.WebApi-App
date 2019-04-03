@@ -54,6 +54,9 @@
     <Reference Include="Autofac.Integration.WebApi, Version=4.2.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.WebApi2.4.2.0\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
     </Reference>
+    <Reference Include="Ioc.Modules, Version=1.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ioc.Modules.1.3.1\lib\net45\Ioc.Modules.dll</HintPath>
+    </Reference>
     <Reference Include="MediatR, Version=6.0.0.0, Culture=neutral, PublicKeyToken=bb9a41a5e8aaa7e2, processorArchitecture=MSIL">
       <HintPath>..\packages\MediatR.6.0.0\lib\net461\MediatR.dll</HintPath>
     </Reference>
@@ -61,8 +64,29 @@
       <HintPath>..\packages\MediatR.Extensions.AutofacBuilder.1.0.1\lib\netstandard1.6\MediatR.Extensions.AutofacBuilder.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.6.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.6.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.FileSystems, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.FileSystems.4.0.1\lib\net45\Microsoft.Owin.FileSystems.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.StaticFiles, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.StaticFiles.4.0.1\lib\net45\Microsoft.Owin.StaticFiles.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Win32.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Win32.Primitives.4.0.1\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="OwinFramework, Version=2.6.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.Framework.2.6.7\lib\net45\OwinFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="OwinFramework.StaticFiles, Version=2.6.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.Framework.StaticFiles.2.6.2\lib\net45\OwinFramework.StaticFiles.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.AppContext, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -112,11 +136,17 @@
     <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.1.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
     </Reference>
+    <Reference Include="System.Spatial, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.6.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http.OData, Version=5.3.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.5.3.1\lib\net45\System.Web.Http.OData.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
@@ -197,9 +227,6 @@
     <Reference Include="Owin">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin">
-      <HintPath>..\packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Owin.Host.SystemWeb">
       <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.0.0\lib\net451\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
     </Reference>
@@ -240,7 +267,6 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -272,12 +298,12 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="App_Start\ContainerConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IngredientsController.cs" />
     <Compile Include="Controllers\PancakeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
-    <Compile Include="App_Start\ContainerConfig.cs" />
     <Compile Include="Filters\ValidationFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -318,6 +344,8 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="Images\1545037131532.JPEG" />
+    <Content Include="Images\Moja20190304_13184556.jpg" />
     <Content Include="libman.json" />
     <Content Include="Scripts\Lib\angular-local-storage.js" />
     <Content Include="Scripts\Lib\angular-local-storage.min.js" />
@@ -343,27 +371,37 @@
     <Content Include="Scripts\Lib\modernizr-2.8.3.js" />
     <Content Include="Scripts\src\components\app.html" />
     <Content Include="Scripts\src\components\app.js" />
+    <Content Include="Scripts\src\components\build\build.js" />
+    <Content Include="Scripts\src\components\build\build.html" />
     <Content Include="Scripts\src\components\footer\footer.html" />
     <Content Include="Scripts\src\components\footer\footer.js" />
     <Content Include="Scripts\src\components\header\header.html" />
     <Content Include="Scripts\src\components\header\header.js" />
     <Content Include="Scripts\src\components\home\home.html" />
     <Content Include="Scripts\src\components\home\home.js" />
+    <Content Include="Scripts\src\components\ingredient\ingredient.html" />
+    <Content Include="Scripts\src\components\ingredient\ingredient.js" />
     <Content Include="Scripts\src\components\input\input.html" />
     <Content Include="Scripts\src\components\input\input.js" />
+    <Content Include="Scripts\src\components\register\register.html" />
+    <Content Include="Scripts\src\components\register\register.js" />
     <Content Include="Scripts\src\components\login\login.html" />
     <Content Include="Scripts\src\components\login\login.js" />
     <Content Include="Scripts\src\components\logout\logout.html" />
     <Content Include="Scripts\src\components\logout\logout.js" />
     <Content Include="Scripts\src\components\main\main.html" />
     <Content Include="Scripts\src\components\main\main.js" />
+    <Content Include="Scripts\src\components\pick\pick.js" />
+    <Content Include="Scripts\src\components\pick\pick.html" />
     <Content Include="Scripts\src\components\signup\signup.html" />
     <Content Include="Scripts\src\components\signup\signup.js" />
     <Content Include="Scripts\src\config\http.config.js" />
     <Content Include="Scripts\src\config\route. config.js" />
+    <Content Include="Scripts\src\img\pancake-bg.jpeg" />
     <Content Include="Scripts\src\interceptors\auth.js" />
     <Content Include="Scripts\src\modules\app.module.js" />
     <Content Include="Scripts\src\services\account.service.js" />
+    <Content Include="Scripts\src\services\Ingredient.service.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -426,9 +464,17 @@
       <Project>{C79A0891-A903-4B16-9DFC-EAF89D1C1C2F}</Project>
       <Name>InvestMent.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\InvestMent.Persistence\InvestMent.Persistence.csproj">
+    <ProjectReference Include="..\InvestMent.Persistence.DBFirstApproach\InvestMent.Persistence.DBFirstApproach.csproj">
+      <Project>{6CB6BA48-B5BC-44EE-B4EB-8F46FFBCC978}</Project>
+      <Name>InvestMent.Persistence.DBFirstApproach</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InvestMent.Persistence\InvestMent.Identity.csproj">
       <Project>{E57EE2BE-8974-4876-A5A0-8E10A296D2B6}</Project>
-      <Name>InvestMent.Persistence</Name>
+      <Name>InvestMent.Identity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InvestMent.Utils.Images\InvestMent.Utils.Images.csproj">
+      <Project>{2304645d-95c2-4b72-acce-2404aa5654c8}</Project>
+      <Name>InvestMent.Utils.Images</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

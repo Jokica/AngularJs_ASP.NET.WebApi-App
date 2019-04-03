@@ -1,0 +1,15 @@
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.DBFirstApproach\bin\Debug\InvestMent.Persistence.DBFirstApproach.dll.config
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.DBFirstApproach\bin\Debug\InvestMent.Persistence.DBFirstApproach.dll
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.DBFirstApproach\bin\Debug\InvestMent.Persistence.DBFirstApproach.pdb
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.DBFirstApproach\bin\Debug\EntityFramework.dll
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.DBFirstApproach\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.DBFirstApproach\bin\Debug\InvestMent.Domain.dll
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.DBFirstApproach\bin\Debug\InvestMent.Domain.pdb
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.DBFirstApproach\bin\Debug\InvestMent.Domain.dll.config
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.DBFirstApproach\bin\Debug\EntityFramework.xml
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.DBFirstApproach\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.DBFirstApproach\obj\Debug\InvestMent.Persistence.DBFirstApproach.csprojAssemblyReference.cache
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.DBFirstApproach\obj\Debug\InvestMent.Persistence.DBFirstApproach.csproj.CoreCompileInputs.cache
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.DBFirstApproach\obj\Debug\InvestMent.Persistence.DBFirstApproach.csproj.CopyComplete
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.DBFirstApproach\obj\Debug\InvestMent.Persistence.DBFirstApproach.dll
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Persistence.DBFirstApproach\obj\Debug\InvestMent.Persistence.DBFirstApproach.pdb

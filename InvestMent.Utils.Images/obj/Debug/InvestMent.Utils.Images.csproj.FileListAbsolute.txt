@@ -1,0 +1,17 @@
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Utils.Images\bin\Debug\InvestMent.Utils.Images.dll
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Utils.Images\bin\Debug\InvestMent.Utils.Images.pdb
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Utils.Images\bin\Debug\Autofac.dll
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Utils.Images\bin\Debug\Autofac.pdb
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Utils.Images\bin\Debug\Autofac.xml
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Utils.Images\obj\Debug\InvestMent.Utils.Images.csproj.CoreCompileInputs.cache
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Utils.Images\obj\Debug\InvestMent.Utils.Images.csproj.CopyComplete
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Utils.Images\obj\Debug\InvestMent.Utils.Images.dll
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Utils.Images\obj\Debug\InvestMent.Utils.Images.pdb
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Utils.Images\obj\Debug\InvestMent.Utils.Images.csprojAssemblyReference.cache
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Utils.Images\bin\Debug\InvestMent.Application.dll
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Utils.Images\bin\Debug\InvestMent.Domain.dll
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Utils.Images\bin\Debug\MediatR.dll
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Utils.Images\bin\Debug\InvestMent.Application.pdb
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Utils.Images\bin\Debug\InvestMent.Application.dll.config
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Utils.Images\bin\Debug\InvestMent.Domain.pdb
+C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Utils.Images\bin\Debug\InvestMent.Domain.dll.config

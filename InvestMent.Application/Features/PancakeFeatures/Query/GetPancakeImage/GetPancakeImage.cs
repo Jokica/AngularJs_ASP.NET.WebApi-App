@@ -1,13 +1,6 @@
-using InvestMent.DAL.UnitOfWork;
+using InvestMent.Application.Images;
+using InvestMent.Application.UnitOfWork;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.IO;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -25,24 +18,22 @@ namespace InvestMent.Application.Features.PancakeFeatures.Query.GetPancakeImage
     public class GetPancakeImageHandler : IRequestHandler<GetPancakeImageRequest, GetPancakeImageResponse>
     {
         private readonly IUnitOfWork unitOfWork;
+        private readonly IGetImage getImage;
 
-        public GetPancakeImageHandler(IUnitOfWork unitOfWork)
+        public GetPancakeImageHandler(IUnitOfWork unitOfWork, IGetImage getImage)
         {
             this.unitOfWork = unitOfWork;
+            this.getImage = getImage;
         }
         public async Task<GetPancakeImageResponse> Handle(GetPancakeImageRequest request, CancellationToken cancellationToken)
         {
             var Pancake = await unitOfWork.Pancakes.FindAsync(request.PancakeId);
-
-            var fileStream = new FileStream(Pancake.ImageURL, FileMode.Open);
-            var image = Image.FromStream(fileStream);
-            var stream = new MemoryStream();
-            image.Save(stream, ImageFormat.Jpeg);
-            
+            var img = getImage.GetImageBytes(Pancake.ImageURL);
             return new GetPancakeImageResponse
             {
-                ByteImage = new ByteArrayContent(stream.ToArray())
+                ByteImage = img
             };
+        
         }
     }
 }

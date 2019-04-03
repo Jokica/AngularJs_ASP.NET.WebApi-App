@@ -113,17 +113,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\DAL\IDataEntity.cs" />
+    <Compile Include="Interfaces\DAL\IDomainEntity.cs" />
     <Compile Include="Models\Brand.cs" />
-    <Compile Include="Models\Pancake.cs" />
-    <Compile Include="Models\PancakeIngredients.cs" />
-    <Compile Include="Models\IdentityModel\ApplicationUser.cs" />
     <Compile Include="Models\Ingredient.cs" />
     <Compile Include="Models\IngredientType.cs" />
+    <Compile Include="Models\Pancake.cs" />
+    <Compile Include="Models\PancakeIngredients.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

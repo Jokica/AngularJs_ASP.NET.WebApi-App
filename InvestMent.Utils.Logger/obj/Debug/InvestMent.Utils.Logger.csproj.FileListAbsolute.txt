@@ -1,6 +1,5 @@
 C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Utils.Logger\bin\Debug\InvestMent.Utils.Logger.dll
 C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Utils.Logger\bin\Debug\InvestMent.Utils.Logger.pdb
-C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Utils.Logger\obj\Debug\InvestMent.Utils.Logger.csprojAssemblyReference.cache
 C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Utils.Logger\obj\Debug\InvestMent.Utils.Logger.csproj.CoreCompileInputs.cache
 C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Utils.Logger\obj\Debug\InvestMent.Utils.Logger.dll
 C:\Users\Jovan Gjorgjiev\Desktop\AngularWebApi\InvestMent.Utils.Logger\obj\Debug\InvestMent.Utils.Logger.pdb

@@ -114,17 +114,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContainerConfigure.cs" />
-    <Compile Include="DTOs\IngredientsDTO.cs" />
+    <Compile Include="Converts\Converter.cs" />
+    <Compile Include="Exeptions\InvalidDomainEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BrandRepo\BrandRepository.cs" />
-    <Compile Include="Repository\BrandRepo\IBrandRepository.cs" />
     <Compile Include="Repository\IngredientsRepo\IIngredientRepository.cs" />
-    <Compile Include="Repository\IngredientsRepo\IngredientRepository.cs" />
-    <Compile Include="Repository\IRepository.cs" />
-    <Compile Include="Repository\PancakeRepo\IPancakeRepository.cs" />
     <Compile Include="Repository\PancakeRepo\PancakeRepository.cs" />
     <Compile Include="Repository\RepositoryBase.cs" />
-    <Compile Include="UnitOfWork\IUnitOfWork.cs" />
     <Compile Include="UnitOfWork\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -132,13 +128,21 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\InvestMent.Application\InvestMent.Application.csproj">
+      <Project>{36797732-7f58-406d-8d6d-f1c2cd92d53d}</Project>
+      <Name>InvestMent.Application</Name>
+    </ProjectReference>
     <ProjectReference Include="..\InvestMent.Domain\InvestMent.Domain.csproj">
       <Project>{c79a0891-a903-4b16-9dfc-eaf89d1c1c2f}</Project>
       <Name>InvestMent.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\InvestMent.Persistence\InvestMent.Persistence.csproj">
+    <ProjectReference Include="..\InvestMent.Persistence.DBFirstApproach\InvestMent.Persistence.DBFirstApproach.csproj">
+      <Project>{6CB6BA48-B5BC-44EE-B4EB-8F46FFBCC978}</Project>
+      <Name>InvestMent.Persistence.DBFirstApproach</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InvestMent.Persistence\InvestMent.Identity.csproj">
       <Project>{E57EE2BE-8974-4876-A5A0-8E10A296D2B6}</Project>
-      <Name>InvestMent.Persistence</Name>
+      <Name>InvestMent.Identity</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

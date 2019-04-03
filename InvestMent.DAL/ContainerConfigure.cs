@@ -1,10 +1,6 @@
 using Autofac;
-using InvestMent.Persistence;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using InvestMent.Application.UnitOfWork;
+using InvestMent.Persistence.DBFirstApproach;
 
 namespace InvestMent.DAL
 {
@@ -12,8 +8,8 @@ namespace InvestMent.DAL
     {
         public static void Confiugre(ContainerBuilder builder)
         {
-            builder.RegisterType<ApplicationDbContext>().AsSelf();
-            builder.RegisterType<UnitOfWork.UnitOfWork>().As<UnitOfWork.IUnitOfWork>();
+            builder.RegisterType<DbFirstContext>().AsSelf();
+            builder.RegisterType<UnitOfWork.UnitOfWork>().As<IUnitOfWork>();
         }
     }
 }

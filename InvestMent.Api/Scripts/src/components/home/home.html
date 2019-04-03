@@ -1,4 +1,23 @@
-<section class="main--liniar">
-    <h1 class="main--headere">{{$ctrl.header}}</h1>
-    <div class="main--secendary">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit tenetur delectus voluptatibus asperiores amet aspernatur ab illum quas aut, nostrum suscipit molestiae rem praesentium optio iste culpa necessitatibus perspiciatis corporis!</div>
+<section class="bg-img ">
+    <div class="home-showcase container ">
+        <h1 class="home-showcase-h1">{{$ctrl.header}}</h1>
+        <div class="home-showcase-secendary">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit tenetur delectus voluptatibus asperiores amet aspernatur ab illum quas aut, nostrum suscipit molestiae rem praesentium optio iste culpa necessitatibus perspiciatis corporis!</div>
+        <button class="call-to-action">Check out our Pancakes</button>
+    </div>
 </section>
+<div class="container home-pancake">
+    <div class="container">
+        <div class="row">
+            <figure class="col-xs-12 col-md-6 pick" >
+                <img class="pancake-img" src="/Scripts/src/img/build.jpeg" alt="" />
+                <figcaption class="chose"><button  ng-click="$ctrl.buildPancake()" class="btn btn-lg btn-primary"> Build your Pancake</button></figcaption>
+            </figure>
+            <figure class="col-xs-12 col-md-6 pick"  ">
+                <img class="pancake-img" src="/Scripts/src/img/pick.jpeg" alt="" />
+                <figcaption class="chose" ><button ng-click="$ctrl.pickPancake()" class="btn btn-lg btn-primary">Pick our Pancake </button>
+                                          </figcaption>
+            </figure>
+        </div>
+    </div>
+</div>
+

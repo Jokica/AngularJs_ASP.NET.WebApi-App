@@ -1,33 +1,29 @@
+using InvestMent.Domain.Interfaces.DAL;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace InvestMent.Domain.Models
 {
-    public class Pancake
+    public class Pancake: IDomainEntity
     {
         public long Id { get; set; }
         public string Name { get; set; }
         public List<PancakeIngredients> Ingredients { get; set; }
-        public Brand CoffeBrand { get; set; }
         public string ImageURL { get; set; }
         public Pancake()
         {
 
         }
-
-        public Pancake(string name,string imageUrl)
+        public Pancake(long Id, string name, List<PancakeIngredients> ingredients, string imageUrl )
         {
-            ImageURL = imageUrl;
-            Name = Name;
-        }
-        public Pancake(string name, Brand brand,string imageUrl)
-        {
+            this.Id = Id;
+            this.Ingredients = ingredients;
+            this.ImageURL = imageUrl;
             Name = name;
-            CoffeBrand = brand;
-            ImageURL = imageUrl;
         }
         public void AddIngredients(List<Ingredient> ingredients)
         {

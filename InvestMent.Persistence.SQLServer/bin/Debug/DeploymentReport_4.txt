@@ -1,0 +1,27 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Brands] (Table)
+       [dbo].[Ingredients] (Table)
+       [dbo].[Ingredients].[IX_TypeId] (Index)
+       [dbo].[Ingredients].[IX_IngredientBrandId] (Index)
+       [dbo].[IngredientTypes] (Table)
+       [dbo].[PancakeIngredients] (Table)
+       [dbo].[PancakeIngredients].[IX_PancakeId] (Index)
+       [dbo].[PancakeIngredients].[IX_IngredientId] (Index)
+       [dbo].[Pancakes] (Table)
+       [dbo].[FK_dbo.Ingredients_dbo.Brands_IngredientBrandId] (Foreign Key)
+       [dbo].[FK_dbo.Ingredients_dbo.IngredientTypes_TypeId] (Foreign Key)
+       [dbo].[FK_dbo.CoffeIngredients_dbo.Ingredients_IngredientId] (Foreign Key)
+       [dbo].[FK_dbo.PancakeIngredients_dbo.Pancakes_PancakeId] (Foreign Key)
+
+** Supporting actions

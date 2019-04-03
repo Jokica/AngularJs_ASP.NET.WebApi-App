@@ -1,3 +1,4 @@
+using InvestMent.Domain.Interfaces.DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace InvestMent.Domain.Models
 {
-    public class Brand
+    public class Brand:IDomainEntity
     {
         public Brand()
         {
 
         }
-        public Brand(string name)
+        public Brand(string name,long Id)
         {
             Name = name;
         }
